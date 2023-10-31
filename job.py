@@ -12,11 +12,9 @@ with open('file.html', 'w') as f:
     
 
     # Read remote pdf into a list of DataFrame
-    dfs = tabula.read_pdf("https://www.porterco.org/DocumentCenter/View/16019/3-2023-Primary-Election-OFFICIAL-Summary-Results")
+    dfs = tabula.read_pdf("https://www.porterco.org/DocumentCenter/View/16019/3-2023-Primary-Election-OFFICIAL-Summary-Results", pages='all')
+    print('LEN', len(dfs))
     print(dfs[0], dfs[1])
-    companies = pd.read_csv(io.StringIO(s.decode('utf-8')))
-    lot_size = companies['Round Lot Size'].tolist()
-    symbols = companies['Symbol'].tolist()
 
     fig, ax = plt.subplots()
     ax.bar(symbols[:5], lot_size[:5])
