@@ -1,0 +1,28 @@
+# This is a basic workflow to help you get started with Actions
+
+name: "Cron"
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  python-job:
+    name: "Python job"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10.6'
+#     If you need to install extra packages
+#     - name: Install dependencies
+#       run: pip install -r requirements.txt
+      - name: Run python script
+        run: python job.py
+      - name: Upload file as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: job-result
+          path: file.txt
