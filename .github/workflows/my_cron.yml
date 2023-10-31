@@ -34,7 +34,17 @@ jobs:
       - name: Run python script
         run: python job.py
       - name: Setup Pages
-        uses: actions/configure-pages@v3  
+        uses: actions/configure-pages@v3
+      - name: Commit changes
+        run: |
+          git config --global user.email "no-reply@github.com"
+          git config --global user.name "GitHub Actions"
+          git add file.txt
+          git commit -m "Update file.txt"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2  
         with:
