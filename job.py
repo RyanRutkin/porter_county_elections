@@ -19,5 +19,6 @@ with open('file.html', 'w') as f:
 
     html = "<img src='my_plot.png'/>"
     for df in dfs:
-        html = html + df.to_html()
+        df2 = df.dropna()
+        html = html + df2.to_html()
     f.write(f"{html}")
