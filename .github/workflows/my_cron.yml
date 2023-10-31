@@ -29,8 +29,8 @@ jobs:
         with:
           python-version: '3.10.6'
 #     If you need to install extra packages
-#     - name: Install dependencies
-#       run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Run python script
         run: python job.py
       - name: Setup Pages
