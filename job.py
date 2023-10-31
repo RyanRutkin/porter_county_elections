@@ -12,7 +12,7 @@ with open('file.html', 'w') as f:
     
 
     # Read remote pdf into a list of DataFrame
-    dfs = tabula.read_pdf("https://www.porterco.org/DocumentCenter/View/16019/3-2023-Primary-Election-OFFICIAL-Summary-Results", pages='all')
+    dfs = tabula.read_pdf("https://www.porterco.org/DocumentCenter/View/16019/3-2023-Primary-Election-OFFICIAL-Summary-Results", pages='all', stream=True)
     print('LEN', len(dfs))
     print(dfs[0], dfs[1])
 
