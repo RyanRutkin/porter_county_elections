@@ -12,7 +12,7 @@ with open('file.html', 'w') as f:
     symbols = companies['Symbol'].tolist()
 
     fig, ax = plt.subplots()
-    fig.plot.bar(symbols, lot_size)
+    ax.bar(symbols, lot_size)
     fig.savefig('my_plot.png')
 
     html = "<img src='my_plot.png'/>"
