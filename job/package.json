@@ -1,0 +1,14 @@
+{
+  "name": "porter-county-elections-job",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Rutkin",
+  "license": "ISC",
+  "dependencies": {
+    "pdf2json": "^3.0.5"
+  }
+}
