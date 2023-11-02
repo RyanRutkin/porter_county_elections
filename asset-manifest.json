@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/porter_county_elections/static/css/main.073c9b0a.css",
+    "main.js": "/porter_county_elections/static/js/main.e09583de.js",
+    "static/js/787.fab9c598.chunk.js": "/porter_county_elections/static/js/787.fab9c598.chunk.js",
+    "static/media/logo.svg": "/porter_county_elections/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/porter_county_elections/index.html",
+    "main.073c9b0a.css.map": "/porter_county_elections/static/css/main.073c9b0a.css.map",
+    "main.e09583de.js.map": "/porter_county_elections/static/js/main.e09583de.js.map",
+    "787.fab9c598.chunk.js.map": "/porter_county_elections/static/js/787.fab9c598.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e09583de.js"
+  ]
+}
